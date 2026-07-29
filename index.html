@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>SafeView | Real-Time Screen Scam Protection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #000;
+            color: #f5f5f5;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .border-main { border: 1px solid #222; }
+        .text-muted { color: #888; }
+        .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+    <div class="min-h-screen">
+        <nav class="border-b border-main">
+            <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+                <div class="flex items-center gap-3">
+                    <span class="text-lg font-semibold uppercase tracking-[0.24em]">SafeView</span>
+                    <span class="mono rounded-full border border-white/15 px-2.5 py-1 text-[10px] uppercase tracking-[0.28em] text-muted">Windows beta</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-[11px] font-medium uppercase tracking-[0.24em] text-muted sm:gap-6">
+                    <a href="#how" class="transition hover:text-white">How it works</a>
+                    <a href="#security" class="transition hover:text-white">Security</a>
+                    <a href="#mobile" class="transition hover:text-white">Mobile</a>
+                    <a href="#specs" class="transition hover:text-white">Specs</a>
+                    <a href="https://github.com/Dev-RyleR6/SafeView/releases/download/v1.0.0/SafeView_Setup.exe" class="rounded-full border border-white/20 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white transition hover:bg-white hover:text-black">Download</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
+            <section class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div class="max-w-2xl">
+                    <p class="text-[11px] uppercase tracking-[0.32em] text-muted">Local-first security • real-time protection</p>
+                    <h1 class="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+                        See the scam before the click.
+                    </h1>
+                    <p class="mt-5 text-base leading-8 text-muted sm:text-lg">
+                        SafeView watches your desktop for scam messages, phishing links, and suspicious phone numbers. It uses on-device OCR and local checks to alert you before risky content becomes a problem.
+                    </p>
+
+                    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <a href="https://github.com/Dev-RyleR6/SafeView/releases/download/v1.0.0/SafeView_Setup.exe" class="rounded-full border border-white/20 bg-white px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.24em] text-black transition hover:bg-neutral-200">
+                            Download Windows Installer
+                        </a>
+                        <a href="#specs" class="rounded-full border border-white/15 px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.24em] text-white transition hover:bg-white/10">
+                            View Technical Specs
+                        </a>
+                    </div>
+                    <p class="mt-5 text-[11px] uppercase tracking-[0.3em] text-muted">Windows x64 • local OCR • Tesseract required</p>
+                </div>
+
+                <div class="rounded-2xl border border-main p-5 sm:p-6">
+                    <div class="rounded-xl border border-main p-4 sm:p-5">
+                        <div class="flex items-center justify-between text-[11px] uppercase tracking-[0.3em] text-muted">
+                            <span>Detection preview</span>
+                            <span class="text-white">Threat flagged</span>
+                        </div>
+                        <div class="mt-5 space-y-3">
+                            <div class="rounded-lg border border-main p-4">
+                                <p class="text-sm font-medium text-white">Suspicious message detected</p>
+                                <p class="mt-2 text-sm leading-6 text-muted">“Urgent: your account has been locked. Call now to verify.”</p>
+                            </div>
+                            <div class="rounded-lg border border-main p-4">
+                                <p class="text-sm font-medium text-white">Detection signals</p>
+                                <p class="mt-2 text-sm leading-6 text-muted">Urgent wording, suspicious number, and a risky URL pattern were all matched locally.</p>
+                            </div>
+                            <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                <p class="text-sm font-medium text-white">Response</p>
+                                <p class="mt-2 text-sm leading-6 text-muted">Overlay shown • screenshot saved • detection logged locally</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how" class="mt-16 rounded-2xl border border-main p-5 sm:p-8">
+                <div class="max-w-2xl">
+                    <p class="mono text-[11px] uppercase tracking-[0.3em] text-muted">How it works</p>
+                    <h2 class="mt-3 text-2xl font-semibold sm:text-3xl">A straightforward workflow for spotting scams on screen.</h2>
+                    <p class="mt-3 text-base leading-8 text-muted">
+                        SafeView focuses on the parts of the screen that change most, then checks the visible text against scam signals without sending anything off-device.
+                    </p>
+                </div>
+                <div class="mt-8 grid gap-4 lg:grid-cols-3">
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">01. Capture</p>
+                        <h3 class="mt-3 text-xl font-semibold">Screen OCR</h3>
+                        <p class="mt-2 text-sm leading-7 text-muted">It reads visible text using optimized OCR so it can focus on changed screen regions instead of reprocessing everything.</p>
+                    </div>
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">02. Analysis</p>
+                        <h3 class="mt-3 text-xl font-semibold">Hybrid detection</h3>
+                        <p class="mt-2 text-sm leading-7 text-muted">Detected text is checked through semantic similarity and rule-based scans for suspicious URLs or phone numbers.</p>
+                    </div>
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">03. Response</p>
+                        <h3 class="mt-3 text-xl font-semibold">Overlay + logs</h3>
+                        <p class="mt-2 text-sm leading-7 text-muted">When a threat is confirmed, SafeView can show an overlay, save evidence, and keep a review trail locally.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="security" class="mt-16 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+                <div class="rounded-2xl border border-main p-6 sm:p-8">
+                    <p class="mono text-[11px] uppercase tracking-[0.3em] text-muted">Security model</p>
+                    <h2 class="mt-3 text-2xl font-semibold sm:text-3xl">Local-first by design.</h2>
+                    <p class="mt-3 text-base leading-8 text-muted">
+                        SafeView performs OCR, URL detection, and semantic matching on the local machine so it stays useful in desktop workflows where scams appear through chats, email previews, browser tabs, and pop-up messages.
+                    </p>
+                </div>
+                <div class="grid gap-4">
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Privacy</p>
+                        <p class="mt-2 text-sm leading-7 text-muted">Text is processed on-device and logs stay local unless you export them yourself.</p>
+                    </div>
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Tuning</p>
+                        <p class="mt-2 text-sm leading-7 text-muted">Thresholds, trusted domains, screenshot saving, and launch preferences can be adjusted through configuration and settings.</p>
+                    </div>
+                    <div class="rounded-xl border border-main p-5">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Operator feedback</p>
+                        <p class="mt-2 text-sm leading-7 text-muted">False positives can be marked safe and suspicious items can be reported so the tool keeps improving on the same machine.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mobile" class="mt-16 rounded-2xl border border-main p-6 sm:p-8">
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-2xl">
+                        <p class="mono text-[11px] uppercase tracking-[0.3em] text-muted">Roadmap</p>
+                        <h2 class="mt-2 text-2xl font-semibold sm:text-3xl">Mobile support is planned for the next stage.</h2>
+                        <p class="mt-3 text-base leading-8 text-muted">
+                            The current release is desktop-focused, but the experience is being shaped with future touch-friendly workflows in mind so a companion mobile view can be added later.
+                        </p>
+                    </div>
+                    <div class="rounded-xl border border-main p-4 text-sm text-muted">
+                        <p class="font-medium text-white">Planned next steps</p>
+                        <ul class="mt-3 space-y-2 text-sm leading-7">
+                            <li>• Responsive dashboard and touch controls</li>
+                            <li>• Lightweight mobile companion notifications</li>
+                            <li>• Simplified review flows for small screens</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="specs" class="mt-16">
+                <div class="max-w-3xl">
+                    <p class="mono text-[11px] uppercase tracking-[0.3em] text-muted">Technical specs</p>
+                    <h2 class="mt-3 text-2xl font-semibold sm:text-3xl">What ships in the current release.</h2>
+                    <p class="mt-3 text-base leading-8 text-muted">
+                        The current SafeView build focuses on Windows desktop monitoring with real-time alerts, a tray workflow, and a local dashboard for reviewing detections and exported reports.
+                    </p>
+                </div>
+
+                <div class="mt-8 grid gap-px overflow-hidden rounded-2xl border border-main bg-white/10 md:grid-cols-2">
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Platform</p>
+                        <p class="mt-3 text-lg text-white">Windows x64 desktop application</p>
+                    </div>
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Installer</p>
+                        <p class="mt-3 text-lg text-white">Inno Setup packaged installer</p>
+                    </div>
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">OCR engine</p>
+                        <p class="mt-3 text-lg text-white">Tesseract OCR</p>
+                    </div>
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Detection stack</p>
+                        <p class="mt-3 text-lg text-white">Semantic similarity + URL/number rules</p>
+                    </div>
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Response surface</p>
+                        <p class="mt-3 text-lg text-white">Overlay alerts, logs, screenshots, dashboard</p>
+                    </div>
+                    <div class="bg-black p-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.28em] text-muted">Data location</p>
+                        <p class="mt-3 text-lg text-white">%LOCALAPPDATA%\SafeView</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-main py-8 px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto flex max-w-6xl flex-col gap-3 text-[10px] uppercase tracking-[0.24em] text-muted sm:flex-row sm:items-center sm:justify-between">
+                <p>©2026 SafeView</p> SHIFT_v1 SafeView is a trademark of SHIFT, Inc. All rights reserved.
+                <div class="flex flex-wrap gap-4 sm:gap-6">
+                    <a href="#security" class="transition hover:text-white">Privacy</a>
+                    <a href="#specs" class="transition hover:text-white">Specs</a>
+                    <a href="https://github.com/Dev-RyleR6/SafeView/releases/download/v1.0.0/SafeView_Setup.exe" class="transition hover:text-white">Download</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
